@@ -1,4 +1,0 @@
-wasteland
-=========
-
-Wasteland modification

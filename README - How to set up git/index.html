@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+
+<h3>1.) Download programs needed:</h3>
+<p><b>(MANDATORY)</b> - GIT : <a href="http://git-scm.com/" target="_blank">http://git-scm.com/</a></p>
+<p><b>(MANDATORY, SSH-KEY generator)</b> - <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></p>
+<p><b><i>(DOWNLOAD PUTTYGEN.EXE FROM THIS SITE, IF YOU DON'T ALLREADY HAVE A SSH KEY)</i></b></p>
+<p><b>(OPTIONAL, gives you GIT GUI)</b> - TortoiseGIT : <a href="http://code.google.com/p/tortoisegit/" target="_blank">http://code.google.com/p/tortoisegit/</a></p>
+
+<br />
+<h3>2.) Install programs</h3>
+<p><i>If you allready have a SSH key, <a href="mailto:marius_flagstad@hotmail.com">mail me your public key</a> and jump to step 5.</i></p>
+
+<br />
+<h3>3.) Open up puttygen.exe</h3>
+<img src="putty.jpg" /><br />
+<p>Click on Generate (blue box), move your mouse around. <b>DO NOT CLOSE THE WINDOWN WHEN FINNISHED GENERATING KEY</b>. Copy the Public key from the textarea and send it to me on mail (red box)
+<a href="mailto:marius_flagstad@hotmail.com">marius_flagstad@hotmail.com</a>. When I add this key to the repo you will be able to access it.</p>
+
+<br />
+<h3>4.) Save the keys on your computer</h3>
+<p>Not that I have your public key, you need to click on the save private key (yellow box) and add it in your home area under a folder called ".ssh". The easiest way to find your homearea is to type windowskey + R, type inn cmd, and see where you start. You can here type mkdir .ssh and save your private key to this folder (I call it id_rsa.ppk), password protection for your key is not needed (will be prompted when you try to save), but you can add it if you want to (I don't)</p>
+<p>It is also recommended to save your public key under the same folder so that you have it if you need to give it out to some other places. Now you can close the puttygen.exe window</p>
+
+<br />
+<h3>5.) Get the git repo</h3>
+<p>If I now have added your key you should be able to download it. Open GIT Bash and go to a location where you want your reposetory to be on your computer (cd C:/blabla/)</p>
+<p>Dont create a folder where you want your repo to be. The repo will allready be contained withing a folder that is named Wasteland. If you are on C:/ you will end up with C:/wasteland as your repo folder.</p>
+<p><b>Type inn <i>git clone git@github.com:Mabluz/wasteland.git</i></b></p>
+
+<br />
+<h3>6.) Dance the victory dance, and eat pizza</h3>
+
+<br />
+<br />
+<h2>GIT TIPS (must be on the repo folder with git bash)</h2>
+<p>--------- THESE COMMANDS ARE DONE BY THE "COMMIT ALL WORK TO GIT.bat" FILE ---------</p>
+<p><b>git pull</b> - downloads the files that have been changed by others</p>
+<p><b>git status</b> - shows you a list over all your local files that you have changed and not commited to the repo yet</p>
+<p><b>git add .</b> - Adds all your files shown by status to the commit stash</p>
+<p><b>git commit -am "MY MESSAGE"</b> - Commit your files that are added</p>
+<p><b>git push</b> - pushes out all your commited files</p>
+<p>--------- END BAT FILE COMMANDS ---------</p>
+<p><b>gitk</b> - Get up a GUI view over all commits added by other people</p>
+</body>
+</html>
