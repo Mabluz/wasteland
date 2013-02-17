@@ -27,7 +27,7 @@ _returnData = call createMissionLocation;
 _randomPos = _returnData select 0;
 _randomIndex = _returnData select 1;
 
-diag_log format["WASTELAND SERVER - Side Mission Waiting to run: %1",_missionType];
+diag_log format["WASTELAND SERVER - Side Mission Waiting to run: %1 in %2 min",_missionType, sideMissionDelayTime / 60];
 [sideMissionDelayTime] call createWaitCondition;
 diag_log format["WASTELAND SERVER - Side Mission Resumed: %1",_missionType];
 

@@ -24,6 +24,7 @@ mission_AirWreck = compile preprocessFileLineNumbers "server\missions\sideMissio
 mission_Truck = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_Truck.sqf";
 mission_ReconVeh = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_ReconVeh.sqf";
 mission_WepCache = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_WepCache.sqf";
+mission_Guerrilla = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_Guerrilla.sqf";
 
 //Factory Compiles
 createMissionLocation = compile preprocessFileLineNumbers "server\missions\factoryMethods\createMissionLocation.sqf";
@@ -33,6 +34,7 @@ deleteClientMarker = compile preprocessFileLineNumbers "server\missions\factoryM
 createSmallGroup = compile preprocessFileLineNumbers "server\missions\factoryMethods\createUnits\smallGroup.sqf";
 createMidGroup = compile preprocessFileLineNumbers "server\missions\factoryMethods\createUnits\midGroup.sqf";
 createLargeGroup = compile preprocessFileLineNumbers "server\missions\factoryMethods\createUnits\largeGroup.sqf";
+createRandomGroup = compile preprocessFileLineNumbers "server\missions\factoryMethods\createUnits\randomGroup.sqf";
 createMissionVehicle = compile preprocessFileLineNumbers "server\missions\factoryMethods\createMissionVehicle.sqf";
 createSupplyDrop = compile preprocessFileLineNumbers "server\missions\factoryMethods\createSupplyDrop.sqf";
 createCargoItem = compile preprocessFileLineNumbers "server\missions\factoryMethods\createCargoItem.sqf";

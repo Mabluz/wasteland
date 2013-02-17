@@ -1,7 +1,13 @@
-//	@file Author: [404] Pulse
+//	@file Author: [404] Pulse, Mabluz
 
 // uncomment when debugging
 //#define __DEBUG__
+
+#ifdef __DEBUG__
+	diag_log format["Debug mode -main missions- ON"];
+#else
+	diag_log format["Debug mode -main missions- OFF"];
+#endif
 
 // uncomment the corresponding #define preprocessor command
 //#define __ACE__  //Not yet implemented

@@ -1,11 +1,13 @@
 if(!X_Server) exitWith {};
 
+// Mabluz = 11418886
+
 //Admin menu access levels
-moderators = []; 
-publicVariable "moderators"; 
-           
+moderators = [];
+publicVariable "moderators";
+
 administrators = [];
 publicVariable "administrators";
 
-serverAdministrators = []; 
+serverAdministrators = ["11418886"]; 
 publicVariable "serverAdministrators";

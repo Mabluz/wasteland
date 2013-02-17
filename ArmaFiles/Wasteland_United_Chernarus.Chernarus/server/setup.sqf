@@ -1,7 +1,13 @@
 //	@file Author: [404] Pulse
 
 // uncomment when debugging
-//#define __DEBUG__
+#define __DEBUG__
+
+#ifdef __DEBUG__
+	diag_log format["Debug mode -no spawning- ON"];
+#else
+	diag_log format["Debug mode -no spawning- OFF"];
+#endif
 
 // uncomment the corresponding #define preprocessor command
 //#define __ACE__  //Not yet implemented
