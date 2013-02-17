@@ -136,6 +136,11 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 	                	hint format["In a group of %1 players", _unitCount];    
 	                };
 			    };
+	            case 6: //Give 10.000 HP
+			    {
+	                hint "Don't work yet";
+			    };
+			    
 			};		
 	    };
 	};

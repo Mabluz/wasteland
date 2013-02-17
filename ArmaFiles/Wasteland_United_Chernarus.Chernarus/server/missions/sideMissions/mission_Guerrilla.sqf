@@ -74,7 +74,15 @@ waitUntil
 if(_result == 1) then
 {
 	//Mission Failed.
+    //Delete units that are still alive, leave dead ones
+    {
+        if(alive _x) then
+        {
+            deleteVehicle _x;
+        };
+    } forEach units group CivGrpS;
     deleteGroup CivGrpS;
+
     _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Objective Failed</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%2' size='1.25'>%1</t><br/><t align='center' color='%3'>Objective failed, better luck next time</t>", _missionType, failMissionColor, subTextColor];
 	[nil,nil,rHINT,_hint] call RE;
     diag_log format["WASTELAND SERVER - Side Mission Failed: %1",_missionType];

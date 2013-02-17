@@ -20,7 +20,8 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 					"Access Respawn Dialog",
 					"Access Proving Grounds",
 	                "Show Server FPS",
-	                "Check Group"
+	                "Check Group Size",
+	                "Give 10.000 HP"
 	];
 	
 	{
