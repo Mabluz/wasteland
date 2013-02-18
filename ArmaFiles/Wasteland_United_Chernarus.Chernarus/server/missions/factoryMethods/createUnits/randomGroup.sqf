@@ -10,8 +10,6 @@ if(!X_Server) exitWith {};
 private ["_group","_pos","_personSelected","_mainWeaponSelected","_mainAmmoSelected","_mainWeaponIndexSelected","_secondaryWeaponSelected","_grenadeSelected","_smokeSelected","_personClass","_mainWeaponClass","_mainWeaponAmmoClass","_sniperWeaponClass","_sniperWeaponAmmoClass","_secondaryWeaponClass","_useSecondary","_grenadeWeaponClass","_useGrenades","_smokeWeaponClass","_useSmoke"];
 _randomGroupSize = floor(random(10));
 
-diag_log format["Guerrillia grupsize: %1",_randomGroupSize];
-
 _personClass			= ["RUS_Soldier1","RUS_Soldier2","RUS_Soldier3","RUS_Soldier_GL","RUS_Soldier_Marksman","RUS_Soldier_Sab","RUS_Soldier_TL","RU_Soldier_Sniper","RU_Soldier_SniperH","RU_Soldier_Spotter"];
 
 // mainweapon index and ammo index must match weapontype vs ammotype
@@ -30,6 +28,8 @@ _pos = _this select 1;
 
 // Always spawn 3 guerrillas (1 leader + 2 men) (max 10 persons)
 if(_randomGroupSize < 3) then { _randomGroupSize = 2; };
+
+diag_log format["Guerrillia grupsize: %1",_randomGroupSize];
 
 private ["_leader","_man","_p"];
 
@@ -59,7 +59,8 @@ _leader addMagazine _smokeSelected;
 for [{_p = 1},{_p <= _randomGroupSize},{_p = _p + 1}] do
 {
 	_personSelected = _personClass call BIS_fnc_selectRandom;
-	_man = _group createunit [_personSelected, [(_pos select 0) + (_p * 10), _pos select 1, 0], [], 0.5, "Form"];
+	_man = _group createunit [_personSelected, [(_pos select 0) + (_p * 15), (_pos select 1) + (_p * 5), 0], [], 0.5, "Form"];
+	sleep 0.3;
 	removeAllWeapons _man;
 	// Sniper spawned (sniper weapons, no secondary)
 	if(_personSelected == "RU_Soldier_Sniper" OR _personSelected == "RU_Soldier_SniperH" OR _personSelected == "RU_Soldier_Spotter") then
