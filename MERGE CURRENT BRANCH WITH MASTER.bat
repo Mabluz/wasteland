@@ -20,6 +20,7 @@ set MASTER=
 set /P MASTER=Write in the branch you want to merge to (master?): %=%
 
 git checkout %MASTER%
+git pull
 git merge %MERGE%
 
 echo "Merge should now be done"
