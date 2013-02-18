@@ -7,4 +7,3 @@ set /P INPUT=Write in the branch you want create: %=%
 git checkout Master
 git checkout -b "%INPUT%"
 echo "Branch created and switched"
-git pull

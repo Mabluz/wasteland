@@ -29,6 +29,15 @@ if /i {%ANSWER%}=={n} (goto :no)
 if /i {%ANSWER%}=={no} (goto :no)
 goto :yes
 :yes
-exit /b 1
 :no
 git mergetool
+
+SET /P ANSWER=Do you want to delete the old branch (Y/N)?
+echo You chose: %ANSWER%
+if /i {%ANSWER%}=={y} (goto :yes)
+if /i {%ANSWER%}=={yes} (goto :yes)
+goto :no
+:yes
+start cmd /c "DELETE OLD BRANCH - GIT.bat"
+timeout -1
+:no
