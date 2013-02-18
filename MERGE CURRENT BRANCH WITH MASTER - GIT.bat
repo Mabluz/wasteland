@@ -1,6 +1,7 @@
 echo off
+git pull
 git branch
-echo "Listing all branches. Make sure you are standing on the right branch you are working on (green)"
+echo "Listing all branches. Make sure you are standing on the right branch you are working on and want to merge (green)"
 timeout -1
 git status
 SET /P ANSWER=Do you have anything to commit before merging (Y/N)?
@@ -13,10 +14,22 @@ start cmd /c "COMMIT ALL WORK TO GIT.bat"
 timeout -1
 :no
 
+set MERGE=
+set /P MERGE=Write in the branch you are working on and want to merge from (green): %=%
 
-set INPUT=
-set /P INPUT=Write in the branch you want to merge: %=%
-#git checkout "%INPUT%"
-#echo "Branch switched. Do you want to get latest files? If not close window."
-timeout -1
-#git pull
+set MASTER=
+set /P MASTER=Write in the branch you want to merge to (master?): %=%
+
+git checkout %MASTER%
+git merge %MERGE%
+
+echo "Merge should now be done"
+SET /P ANSWER=Did merge go ok? (Y/N)?
+echo You chose: %ANSWER%
+if /i {%ANSWER%}=={n} (goto :no)
+if /i {%ANSWER%}=={no} (goto :no)
+goto :yes
+:yes
+exit /b 1
+:no
+git mergetool
