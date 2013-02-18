@@ -1,5 +1,4 @@
 echo off
-git pull
 git branch
 echo "Listing all branches. Make sure you are standing on the right branch you are working on and want to merge (green)"
 timeout -1
