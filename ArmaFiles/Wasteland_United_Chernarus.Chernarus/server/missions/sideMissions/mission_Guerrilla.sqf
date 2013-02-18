@@ -80,7 +80,7 @@ if(_result == 1) then
         {
             deleteVehicle _x;
         };
-    } forEach units group CivGrpS;
+    }forEach units CivGrps;
     deleteGroup CivGrpS;
 
     _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Objective Failed</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%2' size='1.25'>%1</t><br/><t align='center' color='%3'>Objective failed, better luck next time</t>", _missionType, failMissionColor, subTextColor];
