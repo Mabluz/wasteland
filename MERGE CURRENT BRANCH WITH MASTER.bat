@@ -9,7 +9,7 @@ if /i {%ANSWER%}=={y} (goto :yes)
 if /i {%ANSWER%}=={yes} (goto :yes)
 goto :no
 :yes
-start cmd /c "COMMIT ALL WORK TO GIT.bat"
+start cmd /c "COMMIT ALL WORK TO BRANCH.bat"
 timeout -1
 :no
 
@@ -39,6 +39,6 @@ if /i {%ANSWER%}=={y} (goto :yes)
 if /i {%ANSWER%}=={yes} (goto :yes)
 goto :no
 :yes
-start cmd /c "DELETE OLD BRANCH - GIT.bat"
+start cmd /c "DELETE OLD BRANCH.bat"
 timeout -1
 :no
