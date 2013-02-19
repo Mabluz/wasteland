@@ -19,5 +19,6 @@ echo "Press enter to delete branch"
 timeout -1
 git checkout master
 git branch -d "%INPUT%"
+git branch
 echo "Branch deleted. Now standing on master."
-timeout -1
+timeout -10
