@@ -1,8 +1,8 @@
 #include "setup.sqf"
 //	@file Version: 1.0
 //	@file Name: serverCompile.sqf
-//	@file Author: [404] Deadbeat
-//	@file Created: 20/11/2012 05:19
+//	@file Author: [404] Deadbeat, Dreadlord
+//	@file Created: 18/02/2013 22:15
 //	@file Args:
 
 if(!X_Server) exitWith {};
@@ -25,6 +25,9 @@ mission_Truck = compile preprocessFileLineNumbers "server\missions\sideMissions\
 mission_ReconVeh = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_ReconVeh.sqf";
 mission_WepCache = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_WepCache.sqf";
 mission_Guerrilla = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_Guerrilla.sqf";
+
+//Special Mission Compiles
+mission_Guerrilla = compile preprocessFileLineNumbers "server\missions\specialMissions\mission_Guerrilla.sqf";
 
 //Factory Compiles
 createMissionLocation = compile preprocessFileLineNumbers "server\missions\factoryMethods\createMissionLocation.sqf";

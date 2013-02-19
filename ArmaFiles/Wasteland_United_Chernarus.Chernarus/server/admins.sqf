@@ -9,5 +9,5 @@ publicVariable "moderators";
 administrators = [];
 publicVariable "administrators";
 
-serverAdministrators = ["11418886"]; 
+serverAdministrators = ["10320134","11418886","105888198"]; 
 publicVariable "serverAdministrators";

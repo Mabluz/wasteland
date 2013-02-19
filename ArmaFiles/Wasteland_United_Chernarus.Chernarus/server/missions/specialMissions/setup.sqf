@@ -1,12 +1,12 @@
 //	@file Author: [404] Pulse, Mabluz
 
 // uncomment when debugging
-//#define __DEBUG__
+#define __DEBUG__
 
 #ifdef __DEBUG__
-	diag_log format["Debug mode -side missions- ON"];
+	diag_log format["Debug mode -special missions- ON"];
 #else
-	diag_log format["Debug mode -side missions- OFF"];
+	diag_log format["Debug mode -special missions- OFF"];
 #endif
 
 // uncomment the corresponding #define preprocessor command
