@@ -5,5 +5,6 @@ set INPUT=
 set /P INPUT=Write in the branch you want to switch to: %=%
 git checkout "%INPUT%"
 git pull
+git branch
 echo "Branch switched"
 timeout 10
