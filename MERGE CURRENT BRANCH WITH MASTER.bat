@@ -1,7 +1,16 @@
 echo off
 git branch
 echo "Listing all branches. Make sure you are standing on the right branch you are working on and want to merge (green)"
+SET /P ANSWER=Do you want to switch branch (Y/N)?
+echo You chose: %ANSWER%
+if /i {%ANSWER%}=={y} (goto :yes)
+if /i {%ANSWER%}=={yes} (goto :yes)
+goto :no
+:yes
+start cmd /c "SWITCH BRANCH.bat"
 timeout -1
+:no
+
 git status
 SET /P ANSWER=Do you have anything to commit before merging (Y/N)?
 echo You chose: %ANSWER%
